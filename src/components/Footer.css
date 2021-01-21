@@ -1,0 +1,129 @@
+.footer {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: left;
+}
+
+.footer__wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto 40px;
+    justify-items: center;
+}
+
+.footer__wrapper > div {
+    padding: 30px;
+    padding-bottom: 10px;
+    background-color: #6930C3;
+    grid-row: span 2;
+}
+
+.footer__wrapper h3 {
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.7;
+}
+.footer__wrapper p {
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 1.8;
+}
+
+.footer__wrapper .btn__join {
+    font-weight: 500;
+    background-color: #fff;
+}
+
+.footer__wrapper ul.social-icons {
+    display: flex;
+    padding: 0;
+    margin-top: 20px;
+}
+.footer__wrapper .social-links:not(:last-child) {
+    margin-right: 20px;
+}
+.footer__wrapper .social-links i {
+    font-size: 22px;
+    color: #fff;
+}
+
+.footer__wrapper ul {
+    padding: 30px 0;
+}
+
+.footer__links {
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 1.7;
+    transition: color 300ms ease-out;
+}
+.footer__links:hover {
+    color: #6930C3;
+}
+
+.footer__items:first-child .footer__links {
+    font-weight: 500;
+    font-size: 20px;
+    color: #6930C3;
+    line-height: 2;
+}
+
+.footer__links button {
+    background-color: black;
+    border: none;
+    border-radius: 2px;
+    margin: 8px 0;
+    padding: 8px 16px;
+    letter-spacing: 0.8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #6930C3;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+div.footer__copyright {
+    padding: 0;
+    background-color: transparent;
+    grid-column-start: 2;
+    grid-column-end: 6;
+}
+.footer__copyright p {
+    font-size: 16px;
+    color: #6930C3;
+    display: inline;
+}
+.footer__copyright p:last-child {
+    margin-left: 10px;
+}
+.footer__copyright p:last-child span {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 960px) {
+    .footer__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: start;
+        gap: 20px;
+    }
+    .footer__wrapper > div {
+        grid-column: span 2;
+        width: 100%;
+        position: relative;
+    }
+    .footer__wrapper > div .footer__links {
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        transform: translateY(-50%);
+    }
+    .footer__wrapper ul {
+        padding: 0 30px;
+    }
+    div.footer__copyright {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}

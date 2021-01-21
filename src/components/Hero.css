@@ -1,0 +1,114 @@
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0%;
+    width: 100%; height: 100%;
+    background: url(https://images.unsplash.com/photo-1552252662-5645195d14d0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80) center center/cover no-repeat;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.hero__wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero__wrapper > h1 {
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: 150px;
+}
+
+.search {
+    margin: 20px 0 10px 0;
+}
+
+input.search-input {
+    width: 40%;
+    height: 50px;
+    border: 0;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #6930C3;
+    padding-left: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    outline: none;
+    transition: all 300ms ease-in-out;
+}
+input::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+input.search-input:focus {
+    outline-style: auto;
+    outline-width: 2px;
+    outline-color: #6930C3;
+}
+
+span.search-icon {
+    margin-left: -36px;
+}
+span.search-icon i {
+    font-size: 18px;
+    color: #6930C3;
+    cursor: pointer;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    align-self: center;
+    margin-left: 12px;
+}
+
+.filter__radio input[type="radio"] {
+    margin: 0 4px;
+}
+input[type='radio']:checked:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #6930C3;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+.filter__radio label:not(:last-child) {
+    margin-right: 10px;
+}
+
+.filter__advanced {
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.6);
+    transition: all 300ms ease-in-out;
+}
+a.filter__advanced:hover {
+    color: #000;
+}
+
+@media screen and (max-width: 960px) {
+    .hero__wrapper > h1 {
+        font-size: 1.8rem;
+        padding: 0 30px;
+    }
+    .search {
+        margin: 30px 0 20px 0;
+    }
+    input.search-input, .filter {
+        width: 80%;
+    }
+}
